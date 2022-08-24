@@ -22,6 +22,29 @@
         <script src="/js/scripts.js"></script>
     </head>
     <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id="navbar">
+                    <a href="/" class="navbar-brand">
+                        <img src="/img/hdcevents_logo.svg" alt="HDC Events logo">
+                    </a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Create Event</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         @yield('content')
         <footer>
             <p>HDC Events &copy; 2022</p>

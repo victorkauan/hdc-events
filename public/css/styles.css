@@ -123,6 +123,26 @@ header {
     font-size: 14px;
 }
 
+/* Event create page */
+#event-create-container {
+    padding: 30px;
+}
+
+#event-create-container label {
+    font-weight: bold;
+}
+
+#event-create-container .form-group,
+#event-create-container input[type='submit'] {
+    margin-top: 16px;
+}
+
+#event-create-container input,
+#event-create-container select,
+#event-create-container textarea {
+    font-size: 12px;
+}
+
 /* Footer */
 footer {
     color: #fff;

@@ -42,6 +42,15 @@ header {
     margin-bottom: 0;
 }
 
+#info-container .already-joined-msg {
+    color: #004085;
+    background-color: #cce5ff;
+    width: 300px;
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #b8daff;
+}
+
 /* Navigation bar */
 #navbar {
     justify-content: space-between;

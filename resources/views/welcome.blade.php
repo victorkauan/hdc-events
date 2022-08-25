@@ -5,13 +5,17 @@
 @section('content')
     <div id="search-container" class="col-md-12">
         <h1>Search for an event</h1>
-        <form action="">
+        <form action="/" method="GET">
             <input type="text" id="search" name="search" class="form-control" placeholder="Search..." />
         </form>
     </div>
     <div id="event-container" class="col-md-12">
-        <h2>Next Events</h2>
-        <p class="subtitle">See upcoming events</p>
+        @if ($search)
+            <h2>Searching for: {{ $search }}</h2>
+        @else
+            <h2>Next Events</h2>
+            <p class="subtitle">See upcoming events</p>
+        @endif
         <div id="card-container" class="row">
             @foreach ($events as $event)
                 <div class="card col-md-3">
@@ -24,8 +28,10 @@
                     </div>
                 </div>
             @endforeach
-            @if (!count($events))
-                <p>No events available</p>
+            @if (!count($events) && $search)
+                <p>Could not find any events with {{ $search }}! <a href="/">See all</a></p>
+            @elseif (!count($events))
+                <p>No events found</p>
             @endif
         </div>
     </div>
